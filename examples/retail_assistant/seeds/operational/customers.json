@@ -1,0 +1,12 @@
+[
+  {"customer_id":"cust_R001","name":"Maria Gonzalez","email":"maria.g@example.com","loyalty_tier":"Gold","loyalty_points":4200,"dietary_preferences":["vegetarian"],"favorite_categories":["Produce","Bakery"],"household_size":4,"zip_code":"83702"},
+  {"customer_id":"cust_R002","name":"James Carter","email":"james.carter@example.com","loyalty_tier":"Platinum","loyalty_points":9850,"dietary_preferences":[],"favorite_categories":["Meat & Seafood","Beverages"],"household_size":2,"zip_code":"97201"},
+  {"customer_id":"cust_R003","name":"Emily Nguyen","email":"emily.nguyen@example.com","loyalty_tier":"Silver","loyalty_points":1450,"dietary_preferences":["gluten-free"],"favorite_categories":["Produce","Dairy"],"household_size":1,"zip_code":"80202"},
+  {"customer_id":"cust_R004","name":"David Thompson","email":"david.t@example.com","loyalty_tier":"Member","loyalty_points":320,"dietary_preferences":[],"favorite_categories":["Pantry","Beverages"],"household_size":3,"zip_code":"98101"},
+  {"customer_id":"cust_R005","name":"Aisha Khan","email":"aisha.khan@example.com","loyalty_tier":"Gold","loyalty_points":5100,"dietary_preferences":["halal"],"favorite_categories":["Meat & Seafood","Pantry"],"household_size":5,"zip_code":"85004"},
+  {"customer_id":"cust_R006","name":"Robert Lee","email":"robert.lee@example.com","loyalty_tier":"Platinum","loyalty_points":11200,"dietary_preferences":["keto"],"favorite_categories":["Meat & Seafood","Dairy"],"household_size":2,"zip_code":"97201"},
+  {"customer_id":"cust_R007","name":"Sofia Martinez","email":"sofia.m@example.com","loyalty_tier":"Member","loyalty_points":85,"dietary_preferences":["vegan"],"favorite_categories":["Produce","Beverages"],"household_size":1,"zip_code":"83702"},
+  {"customer_id":"cust_R008","name":"Michael Brown","email":"michael.brown@example.com","loyalty_tier":"Silver","loyalty_points":2100,"dietary_preferences":[],"favorite_categories":["Bakery","Pantry"],"household_size":4,"zip_code":"80202"},
+  {"customer_id":"cust_R009","name":"Linda Park","email":"linda.park@example.com","loyalty_tier":"Gold","loyalty_points":3800,"dietary_preferences":["dairy-free"],"favorite_categories":["Produce","Meat & Seafood"],"household_size":3,"zip_code":"98101"},
+  {"customer_id":"cust_R010","name":"Carlos Rivera","email":"carlos.rivera@example.com","loyalty_tier":"Member","loyalty_points":540,"dietary_preferences":[],"favorite_categories":["Beverages","Pantry"],"household_size":2,"zip_code":"85004"}
+]

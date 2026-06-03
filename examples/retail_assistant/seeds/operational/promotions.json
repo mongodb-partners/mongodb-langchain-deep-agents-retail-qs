@@ -1,0 +1,188 @@
+[
+  {
+    "code": "JFU-PASTA-50",
+    "type": "manufacturer",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3001",
+        "amount": 0.5
+      },
+      {
+        "product_id": "p-3002",
+        "amount": 2.0
+      }
+    ],
+    "description": "Manufacturer coupon: 50¢ off Barilla Spaghetti and $2 off Rao's Homemade Marinara Sauce."
+  },
+  {
+    "code": "JFU-SAUCE-1OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3002",
+        "amount": 1.0
+      }
+    ],
+    "description": "Store coupon: $1 off Rao's Homemade Marinara Sauce."
+  },
+  {
+    "code": "JFU-MEAT-2OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3003",
+        "amount": 1.0
+      },
+      {
+        "product_id": "p-3004",
+        "amount": 1.5
+      },
+      {
+        "product_id": "p-3012",
+        "amount": 1.5
+      },
+      {
+        "product_id": "p-3015",
+        "amount": 2.0
+      }
+    ],
+    "description": "Store coupon: savings on Meat & Seafood favorites."
+  },
+  {
+    "code": "JFU-DAIRY-1OFF",
+    "type": "manufacturer",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3005",
+        "amount": 1.0
+      },
+      {
+        "product_id": "p-3019",
+        "amount": 1.0
+      }
+    ],
+    "description": "Manufacturer coupon: $1 off BelGioioso Grated Parmesan and Tillamook Cheddar."
+  },
+  {
+    "code": "JFU-PRODUCE-1OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3011",
+        "amount": 1.0
+      },
+      {
+        "product_id": "p-3025",
+        "amount": 1.0
+      }
+    ],
+    "description": "Store coupon: $1 off O Organics Baby Spinach and Driscoll's Strawberries."
+  },
+  {
+    "code": "JFU-OIL-2OFF",
+    "type": "manufacturer",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3006",
+        "amount": 2.0
+      }
+    ],
+    "description": "Manufacturer coupon: $2 off Bertolli Extra Virgin Olive Oil."
+  },
+  {
+    "code": "JFU-BREAKFAST-1OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3026",
+        "amount": 0.5
+      },
+      {
+        "product_id": "p-3028",
+        "amount": 2.0
+      }
+    ],
+    "description": "Store coupon: breakfast savings on orange juice and ground coffee."
+  },
+  {
+    "code": "JFU-BAKERY-1OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3020",
+        "amount": 1.0
+      },
+      {
+        "product_id": "p-3010",
+        "amount": 0.5
+      }
+    ],
+    "description": "Store coupon: $1 off Dave's Killer Bread and 50¢ off Signature Select Italian Bread."
+  },
+  {
+    "code": "JFU-BEV-50",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3027",
+        "amount": 0.5
+      }
+    ],
+    "description": "Store coupon: 50¢ off Signature Select Sparkling Water."
+  },
+  {
+    "code": "JFU-FROZEN-2OFF",
+    "type": "manufacturer",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-3737",
+        "amount": 2.0
+      }
+    ],
+    "description": "Manufacturer coupon: $2 off a frozen favorite."
+  },
+  {
+    "code": "JFU-SNACK-1OFF",
+    "type": "store",
+    "kind": "amount_off",
+    "scope": "item",
+    "stackable": true,
+    "applies_to": [
+      {
+        "product_id": "p-4464",
+        "amount": 1.0
+      }
+    ],
+    "description": "Store coupon: $1 off a snack favorite."
+  }
+]

@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# Virtual env
+.venv/
+venv/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.playwright-cli/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Frontend (Vite / Node)
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# Local agent / workspace scratch (not part of the project)
+recommendations.md
+CLAUDE.md
+.claude/
+mcp.json
+mongodb-mcp-server/
+
+# AgentSkills is tracked content; ignore only OS cruft inside it.
+AgentSkills/**/.DS_Store
+AgentSkills/.DS_Store
+
+# Open Food Facts raw API cache (scripts/generate_retail_catalog.py)
+scripts/.cache/

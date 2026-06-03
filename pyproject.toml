@@ -1,0 +1,110 @@
+[project]
+name = "mongodb-langchain-deep-agents-retail-qs"
+version = "0.1.0"
+description = "Agent Cartsmith — retail shopping-assistant demo — LangChain deepagents + MongoDB Atlas + S3 + Voyage AI (quickstart)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "MongoDB LangChain Deep Agents", email = "noreply@example.com" }]
+
+dependencies = [
+    # LangChain + LangGraph core
+    "langchain-core>=0.3.0",
+    "langchain>=0.3.0",
+    "langgraph>=0.3.0",
+    # Deep-agent planning framework
+    "deepagents>=0.2.0",
+    # MongoDB LangChain packages
+    "langchain-mongodb>=0.11.0",
+    "langgraph-checkpoint-mongodb>=0.3.1",
+    "langgraph-store-mongodb>=0.2.0",
+    # agent-log persistence + hybrid retrieval, extracted as a standalone
+    # package published at v1.0.0. Pinned to the public Git tag so a fresh
+    # clone builds without the sibling checkout.
+    "langchain-mongodb-agent-log @ git+https://github.com/mongodb-partners/langchain-mongodb-agent-log@v1.0.0",
+    # Model providers
+    "langchain-voyageai>=0.1.6",
+    "langchain-aws>=0.2.0",
+    # Observability
+    "langsmith>=0.3.0",
+    # MongoDB driver
+    "pymongo>=4.10.0",
+    # S3 VFS backend (boto3 also pulled in via langchain-aws; declare explicitly)
+    "boto3>=1.35.0",
+    # Web search
+    "tavily-python>=0.5.0",
+    # HTTP fetch for fetch_and_cache
+    "httpx>=0.27.0",
+    # Runtime
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "sse-starlette>=2.1.0",
+    # Streaming demo
+    "kafka-python>=2.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-mock>=3.12",
+    "mongomock>=4.3.0",
+    "moto[s3]>=5.0.0",
+    "ruff>=0.6.0",
+    "mypy>=1.11",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+deep-agent = "deep_agent.cli:main"
+# Console script for the evals CLI (documented in docs/evals.md).
+deep-agent-evals = "deep_agent.evals:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deep_agent"]
+
+# Required so the git+https direct reference for langchain-mongodb-agent-log
+# is accepted by hatchling at build time.
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "integration: requires ATLAS_URI; skipped by default",
+    "slow: long-running test",
+]
+addopts = "-m 'not integration' --strict-markers -ra"
+filterwarnings = [
+    # Fail loud if deepagents re-introduces a deprecation we rely on.
+    # Scoped narrowly so unrelated 3rd-party deprecations don't flood CI.
+    "error::DeprecationWarning:deepagents",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+warn_unused_ignores = false
+plugins = ["pydantic.mypy"]
+
+[tool.pydantic-mypy]
+init_forbid_extra = false
+init_typed = true
+warn_required_dynamic_aliases = false

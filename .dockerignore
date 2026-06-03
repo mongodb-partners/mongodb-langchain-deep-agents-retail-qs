@@ -1,0 +1,25 @@
+# Build context is this repository's root. Keep the image lean: exclude
+# caches, build outputs, tests, and anything not needed at runtime.
+
+# Caches and build outputs.
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.git/
+**/.gitignore
+**/htmlcov/
+**/.coverage
+**/dist/
+**/build/
+
+# Not needed in the backend image.
+tests/
+streaming/
+docs/
+frontend/
+.env
+.env.*
+!.env.example

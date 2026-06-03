@@ -1,0 +1,8 @@
+{"message": "What is MongoDB Atlas Vector Search and how does an application query it?", "answer": "vectorSearch"}
+{"message": "Summarize what MongoDBSaver does for LangGraph.", "answer": "checkpoints"}
+{"message": "Which tool should the researcher subagent use to ingest a URL into the knowledge base?", "answer": "fetch_and_cache"}
+{"message": "Where does the deep-agent virtual filesystem store blob bytes (VFS_BACKEND)?", "answer": "S3"}
+{"message": "Which two models does the asymmetric Voyage embedder route ingestion and queries through by default?", "answer": "voyage-4"}
+{"message": "Which MongoDB collection receives a decoded snapshot of the deep-agent state (todos, messages) on every super-step?", "answer": "agent_log"}
+{"message": "What is the purpose of the database toolkit safety wrapper?", "answer": "refuse"}
+{"message": "How is per-user long-term memory scoped in MongoDBStore?", "answer": "user_id"}

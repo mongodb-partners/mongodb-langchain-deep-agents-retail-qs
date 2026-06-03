@@ -1,0 +1,62 @@
+[
+  {
+    "text": "Barilla Spaghetti is a product in the Pantry category and is made by the brand Barilla. Rao's Homemade Marinara Sauce is also a Pantry product, made by the brand Rao's. Both are staple ingredients for Italian pasta dishes.",
+    "metadata": {
+      "source": "kg-product-category"
+    }
+  },
+  {
+    "text": "Signature Farms Ground Beef 80/20 and Johnsonville Italian Sausage are Meat & Seafood products. BelGioioso Grated Parmesan Cheese is a Dairy product used to finish pasta dishes.",
+    "metadata": {
+      "source": "kg-product-brand"
+    }
+  },
+  {
+    "text": "The Barilla brand originates from Parma, Italy, where it has produced pasta since 1877. Rao's originates from New York City as a famed Italian restaurant brand. BelGioioso cheese originates from Wisconsin, USA.",
+    "metadata": {
+      "source": "kg-brand-origin"
+    }
+  },
+  {
+    "text": "The Spaghetti Bolognese recipe uses Barilla Spaghetti, Rao's Homemade Marinara Sauce, Signature Farms Ground Beef 80/20, Johnsonville Italian Sausage, BelGioioso Grated Parmesan Cheese, Bertolli Extra Virgin Olive Oil, Hunt's Whole Peeled Tomatoes, Fresh Garlic Bulb, Yellow Onion, Signature Select Italian Bread, O Organics Baby Spinach.",
+    "metadata": {
+      "source": "kg-recipe-ingredients"
+    }
+  },
+  {
+    "text": "Agent Cartsmith promotions map coupons to the products they discount. The active coupons are: JFU-PASTA-50, JFU-SAUCE-1OFF, JFU-MEAT-2OFF, JFU-DAIRY-1OFF, JFU-PRODUCE-1OFF, JFU-OIL-2OFF, JFU-BREAKFAST-1OFF, JFU-BAKERY-1OFF, JFU-BEV-50, JFU-FROZEN-2OFF, JFU-SNACK-1OFF. Each coupon lists the products it applies to in the promotions catalog, and member price is always applied before any coupon.",
+    "metadata": {
+      "source": "kg-promotion-product"
+    }
+  },
+  {
+    "text": "Maria Gonzalez is a Gold tier loyalty member who frequently buys Produce and Bakery items. She follows a vegetarian diet and shops for a household of four in the Boise, Idaho area.",
+    "metadata": {
+      "source": "kg-customer-tier"
+    }
+  },
+  {
+    "text": "James Carter is a Platinum tier loyalty member whose favorite categories are Meat & Seafood and Beverages. Robert Lee is also a Platinum tier member who prefers Meat & Seafood and Dairy and follows a keto diet.",
+    "metadata": {
+      "source": "kg-customer-favorites"
+    }
+  },
+  {
+    "text": "The Agent Cartsmith loyalty program has four tiers: Member, Silver, Gold, and Platinum. Silver members receive 5% off fuel, Gold members receive free delivery on orders over $30, and Platinum members receive a dedicated personal shopper. Members earn one point per dollar spent and redeem points at $1 per 100 points.",
+    "metadata": {
+      "source": "kg-loyalty-tiers"
+    }
+  },
+  {
+    "text": "O Organics Baby Spinach, O Organics Roma Tomatoes and O Organics Broccoli Florets are O Organics store-brand Produce items.",
+    "metadata": {
+      "source": "kg-brand-products"
+    }
+  },
+  {
+    "text": "The Agent Cartsmith Boise Downtown store is located in zip code 83702, the same area where customers Maria Gonzalez and Sofia Martinez live. The Agent Cartsmith Portland Pearl store serves zip code 97201 where James Carter and Robert Lee shop, and the Agent Cartsmith Denver LoDo store serves zip code 80202.",
+    "metadata": {
+      "source": "kg-store-location"
+    }
+  }
+]

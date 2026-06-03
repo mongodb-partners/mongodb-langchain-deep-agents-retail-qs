@@ -1,0 +1,68 @@
+# Integration tests against a live MongoDB Atlas cluster.
+#
+# Never runs on PR events (can't trust secrets from forks). Triggered manually
+# via workflow_dispatch or on a schedule. The cluster is expected to be a
+# sandbox/dev tier provisioned by the operator.
+#
+# Required repository secrets:
+#   ATLAS_URI         - mongodb+srv://... connection string
+#   VOYAGE_API_KEY    - Voyage AI API key
+#   TAVILY_API_KEY    - (optional) Tavily key; if absent, web-search path skips
+#   AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY + AWS_REGION - Bedrock access
+#   LANGSMITH_API_KEY - (optional) enables LangSmith trace assertions
+name: Integration (live Atlas)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Nightly at 06:00 UTC so stale SDK drift against Atlas gets caught early.
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  # Do not overlap live integration runs against the same cluster.
+  group: integration-live-atlas
+  cancel-in-progress: false
+
+jobs:
+  integration:
+    name: Pytest -m integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # Protect secrets behind an environment (configure approvers in repo Settings
+    # so secret exposure requires explicit approval per run).
+    environment: integration
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b  # v8.1.0
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install dependencies
+        run: uv sync --extra dev --frozen
+
+      - name: Run integration tests
+        env:
+          ATLAS_URI: ${{ secrets.ATLAS_URI }}
+          MONGODB_URI: ${{ secrets.ATLAS_URI }}
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+          LANGSMITH_TRACING: "true"
+          LLM_MODEL: "global.anthropic.claude-sonnet-4-6"
+          DEEP_AGENT_ENV_FILE: "/dev/null"
+        run: uv run pytest -m integration -v

@@ -1,0 +1,16 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "deep_agent": "deep_agent.graph:build_graph"
+  },
+  "env": ".env",
+  "python_version": "3.11",
+  "http": {
+    "cors": {
+      "allow_origins": ["https://smith.langchain.com"],
+      "allow_methods": ["*"],
+      "allow_headers": ["*"],
+      "allow_credentials": true
+    }
+  }
+}

@@ -1,0 +1,996 @@
+[
+  {
+    "_id": "Agent Cartsmith",
+    "type": "Organization",
+    "attributes": {
+      "function": [
+        "promotions management"
+      ]
+    },
+    "relationships": {
+      "attributes": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "target_ids": [
+        "JFU-PASTA-50",
+        "JFU-SAUCE-1OFF",
+        "JFU-MEAT-2OFF",
+        "JFU-DAIRY-1OFF",
+        "JFU-PRODUCE-1OFF",
+        "JFU-OIL-2OFF",
+        "JFU-BREAKFAST-1OFF",
+        "JFU-BAKERY-1OFF",
+        "JFU-BEV-50",
+        "JFU-FROZEN-2OFF",
+        "JFU-SNACK-1OFF"
+      ],
+      "types": [
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages",
+        "manages"
+      ]
+    }
+  },
+  {
+    "_id": "Agent Cartsmith Boise Downtown",
+    "type": "Store",
+    "attributes": {
+      "location": [
+        "Boise Downtown"
+      ],
+      "zip_code": [
+        "83702"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Agent Cartsmith Denver LoDo",
+    "type": "Store",
+    "attributes": {
+      "location": [
+        "Denver LoDo"
+      ],
+      "zip_code": [
+        "80202"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Agent Cartsmith Portland Pearl",
+    "type": "Store",
+    "attributes": {
+      "location": [
+        "Portland Pearl"
+      ],
+      "zip_code": [
+        "97201"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Agent Cartsmith loyalty program",
+    "type": "Program",
+    "attributes": {
+      "pointsEarned": [
+        "1 point per dollar spent"
+      ],
+      "pointsRedemption": [
+        "$1 per 100 points"
+      ],
+      "tiers": [
+        "Member",
+        "Silver",
+        "Gold",
+        "Platinum"
+      ]
+    },
+    "relationships": {
+      "attributes": [
+        {},
+        {},
+        {},
+        {}
+      ],
+      "target_ids": [
+        "Member tier",
+        "Silver tier",
+        "Gold tier",
+        "Platinum tier"
+      ],
+      "types": [
+        "includes",
+        "includes",
+        "includes",
+        "includes"
+      ]
+    }
+  },
+  {
+    "_id": "Bakery",
+    "type": "Product Category",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Barilla",
+    "type": "Brand",
+    "attributes": {
+      "founded": [
+        "1877"
+      ],
+      "origin": [
+        "Parma, Italy"
+      ],
+      "product": [
+        "pasta"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Barilla Spaghetti",
+    "type": "Product",
+    "attributes": {
+      "brand": [
+        "Barilla"
+      ],
+      "category": [
+        "Pantry"
+      ],
+      "use": [
+        "Italian pasta dishes"
+      ]
+    },
+    "relationships": {
+      "attributes": [
+        {}
+      ],
+      "target_ids": [
+        "Barilla"
+      ],
+      "types": [
+        "made_by"
+      ]
+    }
+  },
+  {
+    "_id": "BelGioioso",
+    "type": "Brand",
+    "attributes": {
+      "origin": [
+        "Wisconsin, USA"
+      ],
+      "product": [
+        "cheese"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "BelGioioso Grated Parmesan Cheese",
+    "type": "Dairy",
+    "attributes": {
+      "brand": [
+        "BelGioioso"
+      ],
+      "cheese_type": [
+        "Parmesan"
+      ],
+      "form": [
+        "Grated"
+      ],
+      "product_category": [
+        "Dairy"
+      ],
+      "use_case": [
+        "finish pasta dishes"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Bertolli Extra Virgin Olive Oil",
+    "type": "Ingredient",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Fresh Garlic Bulb",
+    "type": "Ingredient",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Gold tier",
+    "type": "Tier",
+    "attributes": {
+      "benefit": [
+        "free delivery on orders over $30"
+      ],
+      "program": [
+        "Agent Cartsmith loyalty program"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Hunt's Whole Peeled Tomatoes",
+    "type": "Ingredient",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-BAKERY-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Bakery"
+      ],
+      "code": [
+        "JFU-BAKERY-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-BEV-50",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Beverages"
+      ],
+      "code": [
+        "JFU-BEV-50"
+      ],
+      "discount_type": [
+        "percentage"
+      ],
+      "discount_value": [
+        "50"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-BREAKFAST-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Breakfast"
+      ],
+      "code": [
+        "JFU-BREAKFAST-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-DAIRY-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Dairy"
+      ],
+      "code": [
+        "JFU-DAIRY-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-FROZEN-2OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Frozen"
+      ],
+      "code": [
+        "JFU-FROZEN-2OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "2"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-MEAT-2OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Meat"
+      ],
+      "code": [
+        "JFU-MEAT-2OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "2"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-OIL-2OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Oil"
+      ],
+      "code": [
+        "JFU-OIL-2OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "2"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-PASTA-50",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Pasta"
+      ],
+      "code": [
+        "JFU-PASTA-50"
+      ],
+      "discount_type": [
+        "percentage"
+      ],
+      "discount_value": [
+        "50"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-PRODUCE-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Produce"
+      ],
+      "code": [
+        "JFU-PRODUCE-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-SAUCE-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Sauce"
+      ],
+      "code": [
+        "JFU-SAUCE-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "JFU-SNACK-1OFF",
+    "type": "Coupon",
+    "attributes": {
+      "category": [
+        "Snacks"
+      ],
+      "code": [
+        "JFU-SNACK-1OFF"
+      ],
+      "discount_type": [
+        "fixed"
+      ],
+      "discount_value": [
+        "1"
+      ],
+      "status": [
+        "active"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "James Carter",
+    "type": "Person",
+    "attributes": {
+      "favorite_categories": [
+        "Meat & Seafood",
+        "Beverages"
+      ],
+      "loyalty_tier": [
+        "Platinum"
+      ],
+      "zip_code": [
+        "97201"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Johnsonville Italian Sausage",
+    "type": "Meat & Seafood",
+    "attributes": {
+      "brand": [
+        "Johnsonville"
+      ],
+      "product_category": [
+        "Meat & Seafood"
+      ],
+      "type_of_meat": [
+        "Italian Sausage"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Maria Gonzalez",
+    "type": "Person",
+    "attributes": {
+      "diet": [
+        "vegetarian"
+      ],
+      "householdSize": [
+        "four"
+      ],
+      "location": [
+        "Boise, Idaho"
+      ],
+      "loyaltyTier": [
+        "Gold"
+      ],
+      "zip_code": [
+        "83702"
+      ]
+    },
+    "relationships": {
+      "attributes": [
+        {
+          "frequency": [
+            "frequent"
+          ]
+        },
+        {
+          "frequency": [
+            "frequent"
+          ]
+        }
+      ],
+      "target_ids": [
+        "Produce",
+        "Bakery"
+      ],
+      "types": [
+        "purchases",
+        "purchases"
+      ]
+    }
+  },
+  {
+    "_id": "Member Price",
+    "type": "Pricing Policy",
+    "attributes": {
+      "application_order": [
+        "applied before coupons"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Member tier",
+    "type": "Tier",
+    "attributes": {
+      "program": [
+        "Agent Cartsmith loyalty program"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "New York City",
+    "type": "Location",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "O Organics",
+    "type": "Brand",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "O Organics Baby Spinach",
+    "type": "Ingredient",
+    "attributes": {
+      "brand": [
+        "O Organics"
+      ],
+      "category": [
+        "Produce"
+      ],
+      "type": [
+        "Store-brand"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "O Organics Broccoli Florets",
+    "type": "Product",
+    "attributes": {
+      "brand": [
+        "O Organics"
+      ],
+      "category": [
+        "Produce"
+      ],
+      "type": [
+        "Store-brand"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "O Organics Roma Tomatoes",
+    "type": "Product",
+    "attributes": {
+      "brand": [
+        "O Organics"
+      ],
+      "category": [
+        "Produce"
+      ],
+      "type": [
+        "Store-brand"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Parma, Italy",
+    "type": "Location",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Platinum tier",
+    "type": "Tier",
+    "attributes": {
+      "benefit": [
+        "dedicated personal shopper"
+      ],
+      "program": [
+        "Agent Cartsmith loyalty program"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Produce",
+    "type": "Product Category",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Rao's",
+    "type": "Brand",
+    "attributes": {
+      "origin": [
+        "New York City"
+      ],
+      "type": [
+        "Italian restaurant"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Rao's Homemade Marinara Sauce",
+    "type": "Product",
+    "attributes": {
+      "brand": [
+        "Rao's"
+      ],
+      "category": [
+        "Pantry"
+      ],
+      "use": [
+        "Italian pasta dishes"
+      ]
+    },
+    "relationships": {
+      "attributes": [
+        {}
+      ],
+      "target_ids": [
+        "Rao's"
+      ],
+      "types": [
+        "made_by"
+      ]
+    }
+  },
+  {
+    "_id": "Robert Lee",
+    "type": "Person",
+    "attributes": {
+      "diet": [
+        "keto"
+      ],
+      "loyalty_tier": [
+        "Platinum"
+      ],
+      "preferred_categories": [
+        "Meat & Seafood",
+        "Dairy"
+      ],
+      "zip_code": [
+        "97201"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Signature Farms Ground Beef 80/20",
+    "type": "Meat & Seafood",
+    "attributes": {
+      "fat_ratio": [
+        "80/20"
+      ],
+      "product_category": [
+        "Meat & Seafood"
+      ],
+      "type_of_meat": [
+        "Ground Beef"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Signature Select Italian Bread",
+    "type": "Ingredient",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Silver tier",
+    "type": "Tier",
+    "attributes": {
+      "benefit": [
+        "5% off fuel"
+      ],
+      "program": [
+        "Agent Cartsmith loyalty program"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Sofia Martinez",
+    "type": "Customer",
+    "attributes": {
+      "zip_code": [
+        "83702"
+      ]
+    },
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Spaghetti Bolognese",
+    "type": "Recipe",
+    "attributes": {},
+    "relationships": {
+      "attributes": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "target_ids": [
+        "Barilla Spaghetti",
+        "Rao's Homemade Marinara Sauce",
+        "Signature Farms Ground Beef 80/20",
+        "Johnsonville Italian Sausage",
+        "BelGioioso Grated Parmesan Cheese",
+        "Bertolli Extra Virgin Olive Oil",
+        "Hunt's Whole Peeled Tomatoes",
+        "Fresh Garlic Bulb",
+        "Yellow Onion",
+        "Signature Select Italian Bread",
+        "O Organics Baby Spinach"
+      ],
+      "types": [
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses",
+        "uses"
+      ]
+    }
+  },
+  {
+    "_id": "Wisconsin, USA",
+    "type": "Location",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  },
+  {
+    "_id": "Yellow Onion",
+    "type": "Ingredient",
+    "attributes": {},
+    "relationships": {
+      "attributes": [],
+      "target_ids": [],
+      "types": []
+    }
+  }
+]

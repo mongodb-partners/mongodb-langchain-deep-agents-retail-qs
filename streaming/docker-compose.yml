@@ -1,0 +1,48 @@
+version: "3.9"
+
+# Local Kafka + synthetic producer used to demonstrate the Atlas Stream Processing path:
+#
+#   producer -> Kafka (topic: events) -> Atlas SP ($source) -> $merge -> deep_agent.stream_events
+#
+# The ASP pipeline itself lives in streaming/atlas_sp_pipeline.js. Run it against your
+# Stream Processing instance with `mongosh <sp-uri> streaming/atlas_sp_pipeline.js`.
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    container_name: deep_agent-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    container_name: deep_agent-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+
+  producer:
+    build:
+      context: .
+      dockerfile: Dockerfile.producer
+    container_name: deep_agent-producer
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KAFKA_TOPIC: events
+      EVENT_RATE_HZ: "2"
+    restart: unless-stopped
