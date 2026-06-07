@@ -31,6 +31,18 @@ def build_store() -> MongoDBStore:
     return MongoDBStore(collection=collection, index_config=index_config, auto_index_timeout=0)
 
 
+def sanitize_namespace_label(label: str) -> str:
+    """Make a string safe to use as a LangGraph store namespace label.
+
+    LangGraph forbids periods in namespace labels (they are the path
+    separator), so email-based ``user_id`` values like
+    ``first.last@mongodb.com`` must be escaped. Periods are replaced with
+    underscores; the mapping is deterministic so the same user always
+    resolves to the same namespace.
+    """
+    return label.replace(".", "_")
+
+
 def build_namespace(user_id: str) -> tuple[str, str, str]:
     """Return the canonical namespace for per-user long-term memory."""
-    return ("user", user_id, "memories")
+    return ("user", sanitize_namespace_label(user_id), "memories")

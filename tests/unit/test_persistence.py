@@ -63,6 +63,18 @@ def test_TC_04_021_build_namespace() -> None:
     assert build_namespace("alice") == ("user", "alice", "memories")
 
 
+def test_TC_04_021b_build_namespace_sanitizes_periods() -> None:
+    # LangGraph forbids periods in namespace labels; email-based user_ids
+    # must be escaped or store.put() raises InvalidNamespaceError.
+    from deep_agent.persistence.store import build_namespace
+
+    assert build_namespace("first.last@mongodb.com") == (
+        "user",
+        "first_last@mongodb_com",
+        "memories",
+    )
+
+
 def test_TC_04_050_build_vector_store() -> None:
     from deep_agent.persistence import vector_store
 

@@ -26,6 +26,8 @@ import uuid
 from langchain_core.tools import tool
 from langgraph.config import get_config, get_store
 
+from ..persistence.store import build_namespace
+
 
 class MemoryScopeError(RuntimeError):
     """Raised when user_id cannot be resolved from the runtime."""
@@ -50,9 +52,9 @@ def _resolve_user_id() -> str:
 
 
 def _namespace(user_id: str) -> tuple[str, str, str]:
-    # Must match build_namespace() in persistence/store.py and the scoping
-    # described in docs/security.md.
-    return ("user", user_id, "memories")
+    # Delegate to build_namespace() so namespace construction (including
+    # label sanitization) lives in exactly one place. See docs/security.md.
+    return build_namespace(user_id)
 
 
 @tool
